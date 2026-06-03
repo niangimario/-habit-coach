@@ -1,9 +1,19 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "outputDirectory": "dist/server",
   "framework": "nodejs",
   "devCommand": "npm run dev",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.ts"
+    }
+  ],
   "env": {
     "NODE_ENV": "production"
   }
