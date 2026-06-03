@@ -1,0 +1,13 @@
+name = "habit-coach"
+main = "dist/server/server.js"
+compatibility_date = "2026-06-03"
+compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[env.production]
+routes = [
+  { pattern = "habit-coach.quickao.workers.dev/*" }
+]
