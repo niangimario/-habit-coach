@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "framework": "nodejs",
   "devCommand": "npm run dev",
   "functions": {
     "api/**/*.ts": {
