@@ -1,5 +1,5 @@
 name = "habit-coach"
-main = "dist/server/server.js"
+main = "_worker.js"
 compatibility_date = "2026-06-03"
 compatibility_flags = ["nodejs_compat"]
 
@@ -8,9 +8,5 @@ command = "npm run build"
 
 [[build.upload.rules]]
 type = "CompiledContentType"
-globs = ["dist/client/**/*"]
-
-[[build.upload.rules]]
-type = "CompiledContentType"
-globs = ["dist/server/**/*"]
+globs = ["dist/**/*"]
 fallthrough = true
