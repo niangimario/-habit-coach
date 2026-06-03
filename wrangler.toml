@@ -5,14 +5,12 @@ compatibility_flags = ["nodejs_compat"]
 
 [build]
 command = "npm run build"
-cwd = "."
 
 [[build.upload.rules]]
 type = "CompiledContentType"
-globs = ["**/*"]
-fallthrough = true
+globs = ["dist/client/**/*"]
 
-[build.upload]
-format = "service-worker"
-dir = "dist"
-main = "dist/server/server.js"
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["dist/server/**/*"]
+fallthrough = true
