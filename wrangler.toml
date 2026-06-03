@@ -7,7 +7,12 @@ compatibility_flags = ["nodejs_compat"]
 command = "npm run build"
 cwd = "."
 
-[env.production]
-routes = [
-  { pattern = "habit-coach.quickao.workers.dev/*" }
-]
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*"]
+fallthrough = true
+
+[build.upload]
+format = "service-worker"
+dir = "dist"
+main = "dist/server/server.js"
